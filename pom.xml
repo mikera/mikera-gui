@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>mikera-gui</groupId>
   <artifactId>mikera-gui</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   
   
 	<url>https://github.com/mikera/mikera-gui.git</url>
