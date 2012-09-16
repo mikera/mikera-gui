@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>mikera-gui</groupId>
   <artifactId>mikera-gui</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   
   
 	<url>https://github.com/mikera/mikera-gui.git</url>
@@ -35,7 +35,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.7</source>
-					<target>1.6</target>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>
