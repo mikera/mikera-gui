@@ -52,47 +52,12 @@ public class ImageUtils {
 		return 0xFF000000+0x10000*Rand.r(256)+0x100*Rand.r(256)+Rand.r(256);
 	}
 	
-	// fields for image frames
-	private static final HashMap<String,JFrame> imageFrames=new HashMap<String, JFrame>();
-	private static final HashMap<String,Image> images=new HashMap<String, Image>();
-
-	@SuppressWarnings("serial")
-	public static Frame display(final Image image) {
-		JComponent c=new JComponent() {
-			public void paint(Graphics g) {
-				g.drawImage(image,0,0,null);
-			}
-		};
-		
-		return Frames.display(c);
+	public static Frame display(final BufferedImage image) {
+		return Frames.display(new JIcon(image));
 	}
 	
 	
-	@SuppressWarnings("serial")
-	public static Frame display(final String s, Image image) {
-		images.put(s,image);
-		JFrame f=imageFrames.get(s);
-		
-		if (f==null) {
-			f=new JFrame(s);
-			imageFrames.put(s,f);
-			JComponent c=new JComponent() {
-				public void paint(Graphics g) {
-					g.drawImage(images.get(s),0,0,null);
-				}
-			};
-			c.setMinimumSize(new Dimension(image.getWidth(null),image.getHeight(null)));
-			f.setMinimumSize(new Dimension(image.getWidth(null)+50,image.getHeight(null)+50));
-			f.add(c);
-			f.setVisible(true);
-			f.pack();
-			
-			f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		} else {
-			f.setVisible(true);
-			f.repaint();
-		}
-		
-		return f;
+	public static Frame display(BufferedImage image, String s) {
+		return Frames.display(new JIcon(image),s);
 	}	
 }
