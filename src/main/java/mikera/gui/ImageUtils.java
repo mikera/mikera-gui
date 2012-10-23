@@ -58,21 +58,13 @@ public class ImageUtils {
 
 	@SuppressWarnings("serial")
 	public static Frame display(final Image image) {
-		JFrame f=new JFrame("Image popup");
 		JComponent c=new JComponent() {
 			public void paint(Graphics g) {
 				g.drawImage(image,0,0,null);
 			}
 		};
-		c.setMinimumSize(new Dimension(image.getWidth(null),image.getHeight(null)));
-		f.setMinimumSize(new Dimension(image.getWidth(null)+50,image.getHeight(null)+50));
-		f.add(c);
-		f.setVisible(true);
-		f.pack();
 		
-		f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
-		return f;
+		return Frames.display(c);
 	}
 	
 	
@@ -113,4 +105,6 @@ public class ImageUtils {
 		});
 		return frame;
 	}
+	
+
 }
