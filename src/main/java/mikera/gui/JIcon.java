@@ -7,6 +7,12 @@ import java.awt.image.BufferedImage;
 import javax.swing.Icon;
 import javax.swing.JComponent;
 
+/**
+ * A simple icon component that displayes a bufferedimage
+ * 
+ * @author Mike
+ */
+
 public class JIcon extends JComponent {
 	private static final long serialVersionUID = -8838960602578976244L;
 	private Icon icon=null;
