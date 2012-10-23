@@ -44,4 +44,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.mikera</groupId>
+			<artifactId>mathz</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
 </project>
