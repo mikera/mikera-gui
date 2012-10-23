@@ -10,4 +10,10 @@ public class ImageUtilsTest {
 		
 		BufferedImage b=ImageUtils.loadImage("yin-yang.png");
 	}
+	
+	
+	public static void main(String... args) {
+		BufferedImage b=ImageUtils.loadImage("yin-yang.png");
+		ImageUtils.display(b);
+	}
 }
