@@ -27,7 +27,7 @@ public class ImageUtils {
 		Note: class must be in jar file to get resources from same jar
 	 */
 	
-	public static BufferedImage getImage(String filename) {
+	public static BufferedImage loadImage(String filename) {
 		URL imageURL;
 		try {
 			imageURL = Thread.currentThread().getContextClassLoader().getResource(filename);
@@ -37,7 +37,7 @@ public class ImageUtils {
 		}
 	}
 
-	public static BufferedImage getImage(URL imageURL) {
+	public static BufferedImage loadImage(URL imageURL) {
 		BufferedImage image;
 		try {
 			image = ImageIO.read(imageURL);
@@ -48,10 +48,14 @@ public class ImageUtils {
 		return image;
 	}
 	
-	public static int randColour() {
+	public static int randomColour() {
 		return 0xFF000000+0x10000*Rand.r(256)+0x100*Rand.r(256)+Rand.r(256);
 	}
 	
+	// fields for image frames
+	private static final HashMap<String,JFrame> imageFrames=new HashMap<String, JFrame>();
+	private static final HashMap<String,Image> images=new HashMap<String, Image>();
+
 	@SuppressWarnings("serial")
 	public static Frame display(final Image image) {
 		JFrame f=new JFrame("Image popup");
@@ -71,8 +75,6 @@ public class ImageUtils {
 		return f;
 	}
 	
-	private static final HashMap<String,JFrame> imageFrames=new HashMap<String, JFrame>();
-	private static final HashMap<String,Image> images=new HashMap<String, Image>();
 	
 	@SuppressWarnings("serial")
 	public static Frame display(final String s, Image image) {

@@ -8,6 +8,6 @@ public class ImageUtilsTest {
 
 	@Test public void testResource() {
 		
-		BufferedImage b=ImageUtils.getImage("yin-yang.png");
+		BufferedImage b=ImageUtils.loadImage("yin-yang.png");
 	}
 }
