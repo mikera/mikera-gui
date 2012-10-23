@@ -30,13 +30,11 @@ public class ImageUtils {
 	public static BufferedImage getImage(String filename) {
 		URL imageURL;
 		try {
-			imageURL = new URL(filename);
-			ImageIO.read(imageURL);
+			imageURL = Thread.currentThread().getContextClassLoader().getResource(filename);
+			return ImageIO.read(imageURL);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-
-		throw new Error("Image URL not found");
 	}
 
 	public static BufferedImage getImage(URL imageURL) {
