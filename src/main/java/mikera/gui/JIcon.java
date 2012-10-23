@@ -16,10 +16,8 @@ import javax.swing.JComponent;
 public class JIcon extends JComponent {
 	private static final long serialVersionUID = -8838960602578976244L;
 	private Icon icon=null;
-	
-	public JIcon() {
-		
-	}
+	private double xAlignment = 0.5;
+	private double yAlignment = 0.5;
 	
 	public JIcon (BufferedImage b) {
 		this (new BufferedImageIcon(b));
@@ -31,9 +29,9 @@ public class JIcon extends JComponent {
 	
 	
 	@Override public void paintComponent(Graphics g) {
-		int x=(getWidth()-icon.getIconWidth())/2;
-		int y=(getHeight()-icon.getIconHeight())/2;
-		getIcon().paintIcon(this, g, x, y);	
+		double x=(getWidth()-icon.getIconWidth())*xAlignment;
+		double y=(getHeight()-icon.getIconHeight())*yAlignment;
+		getIcon().paintIcon(this, g, (int)x, (int)y);	
 	}
 
 	/**
@@ -49,5 +47,21 @@ public class JIcon extends JComponent {
 	 */
 	private Icon getIcon() {
 		return icon;
+	}
+
+	public double getIconAlignmentX() {
+		return xAlignment;
+	}
+
+	public void setIconAlignmentX(double xAlignment) {
+		this.xAlignment = xAlignment;
+	}
+
+	public double getIconAlignmentY() {
+		return yAlignment;
+	}
+
+	public void setIconAlignmentY(double yAlignment) {
+		this.yAlignment = yAlignment;
 	}
 }
