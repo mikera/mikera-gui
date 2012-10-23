@@ -94,17 +94,5 @@ public class ImageUtils {
 		}
 		
 		return f;
-	}
-	
-	public static Frame displayAndExit(Image image) {
-		final Frame frame=display(image);
-		frame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				frame.dispose();
-			}
-		});
-		return frame;
-	}
-	
-
+	}	
 }
