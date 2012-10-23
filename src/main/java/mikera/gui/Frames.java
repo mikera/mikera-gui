@@ -1,7 +1,5 @@
 package mikera.gui;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
 import java.util.HashMap;
 
 import javax.swing.JComponent;
