@@ -8,7 +8,7 @@ import javax.swing.Icon;
 import javax.swing.JComponent;
 
 /**
- * A simple icon component that displays a bufferedimage
+ * A simple icon component that displays an unscaled bufferedimage
  * 
  * @author Mike
  */
