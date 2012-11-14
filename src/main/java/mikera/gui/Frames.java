@@ -35,7 +35,11 @@ public class Frames {
 		} else {
 			f.getContentPane().removeAll();
 			f.getContentPane().add(component);
-			f.setVisible(true);
+			if (!f.isVisible()) {
+				f.setVisible(true);
+			} else {
+				f.validate();
+			}
 			f.repaint();
 		}
 				
