@@ -28,6 +28,7 @@ public class Frames {
 			f=new JFrame(title);
 			frames.put(title,f);
 			f.getContentPane().add(component);
+
 			f.setVisible(true);
 			f.pack();
 			
