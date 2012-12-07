@@ -25,7 +25,7 @@ public class Colours {
 	 * Gets the red value of an ARGB colour int
 	 * 
 	 * @param argb
-	 * @return
+	 * @return Colour value in range [0..255]
 	 */
 	public static int getRed(int argb) {
 		return ((argb>>16)&255);
@@ -35,7 +35,7 @@ public class Colours {
 	 * Gets the green value of an ARGB colour int
 	 * 
 	 * @param argb
-	 * @return
+	 * @return Colour value in range [0..255]
 	 */
 	public static int getGreen(int argb) {
 		return ((argb>>8)&255);
@@ -45,7 +45,7 @@ public class Colours {
 	 * Gets the blue value of an ARGB colour int
 	 * 
 	 * @param argb
-	 * @return
+	 * @return Colour value in range [0..255]
 	 */
 	public static int getBlue(int argb) {
 		return ((argb)&255);
@@ -55,7 +55,7 @@ public class Colours {
 	 * Gets the alpha value of an ARGB colour int
 	 * 
 	 * @param argb
-	 * @return
+	 * @return Alpha value in range [0..255]
 	 */
 	public static int getAlpha(int argb) {
 		return ((argb>>24)&255);
