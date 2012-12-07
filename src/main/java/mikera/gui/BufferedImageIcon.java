@@ -6,6 +6,9 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.Icon;
 
+/**
+ * An Icon implementation the displays a BufferedImage 
+ */
 public final class BufferedImageIcon implements Icon {
 	private final BufferedImage image;
 	private final int x;

@@ -7,7 +7,10 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import mikera.util.Rand;
 
-
+/**
+ * Tools for image creation and handling
+ * @author Mike
+ */
 public class ImageUtils {
 
 	/*
