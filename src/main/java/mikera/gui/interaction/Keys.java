@@ -1,4 +1,4 @@
-package mikera.gui;
+package mikera.gui.interaction;
 
 import java.util.HashMap;
 import java.awt.event.KeyAdapter;
