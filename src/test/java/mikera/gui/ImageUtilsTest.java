@@ -14,9 +14,17 @@ public class ImageUtilsTest {
 		assertEquals(64,b.getWidth());
 	}
 	
+	@Test public void testScale() {
+		BufferedImage b=ImageUtils.loadImage("yin-yang.png");
+		b=ImageUtils.scaleImage(b, 10, 10);
+		assertEquals(10,b.getWidth());
+		assertEquals(10,b.getHeight());
+	}
+	
 	
 	public static void main(String... args) {
 		BufferedImage b=ImageUtils.loadImage("yin-yang.png");
+		b=ImageUtils.scaleImage(b, 10, 10);
 		ImageUtils.display(b);
 	}
 }

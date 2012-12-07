@@ -1,6 +1,8 @@
 package mikera.gui;
 
 import java.awt.Frame;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
@@ -53,6 +55,17 @@ public class ImageUtils {
 	
 	public static int randomColour() {
 		return 0xFF000000+0x10000*Rand.r(256)+0x100*Rand.r(256)+Rand.r(256);
+	}
+	
+	public static BufferedImage scaleImage(BufferedImage img, int w, int h) {
+		BufferedImage result=new BufferedImage(w,h,BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g=(Graphics2D) result.getGraphics();
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);		
+		g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);		
+
+		g.drawImage(img, 0, 0, w, h, null);
+		return result;
 	}
 	
 	public static Frame display(final BufferedImage image) {
