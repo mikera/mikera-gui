@@ -25,6 +25,17 @@ public class ImageUtils {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	/**
+	 * Creates a new ARGB bufferedimage of the specified size
+	 * @param w
+	 * @param h
+	 * @return
+	 */
+	public static BufferedImage newImage(int w, int h) {
+		BufferedImage result=new BufferedImage(w,h,BufferedImage.TYPE_INT_ARGB);
+		return result;
+	}
 
 	public static BufferedImage loadImage(URL imageURL) {
 		BufferedImage image;
