@@ -9,7 +9,6 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 
 import mikera.image.Colours;
-import mikera.util.Rand;
 
 /**
  * Tools for image creation and handling

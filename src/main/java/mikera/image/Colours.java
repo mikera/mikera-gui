@@ -212,11 +212,16 @@ public class Colours {
 		return (rgb&RGB_MASK)|((alpha&BYTE_MASK)<<24);
 	}
 
-	
+	/**
+	 * Unchecked version of getARGB. User must ensure parameters are in 0..255 range
+	 */
 	static int getARGBQuick(int r, int g, int b, int a) {
 		return (a<<24)|(r<<16)|(g<<8)|b;
 	} 
 	
+	/**
+	 * Unchecked version of getARGB. User must ensure parameters are in 0..255 range
+	 */
 	static int getRGBQuick(int r, int g, int b) {
 		return ALPHA_MASK|(r<<16)|(g<<8)|b;
 	} 
