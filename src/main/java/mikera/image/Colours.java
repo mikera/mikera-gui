@@ -161,6 +161,7 @@ public class Colours {
 		return getARGBQuick(ri,gi,bi,ai);
 	}
 	
+	
 	/**
 	 * Converts an ARGB value to a array of floats
 	 * 
