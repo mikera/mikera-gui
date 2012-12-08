@@ -7,6 +7,8 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 import javax.imageio.ImageIO;
+
+import mikera.image.Colours;
 import mikera.util.Rand;
 
 /**
@@ -54,7 +56,7 @@ public class ImageUtils {
 	}
 	
 	public static int randomColour() {
-		return 0xFF000000+0x10000*Rand.r(256)+0x100*Rand.r(256)+Rand.r(256);
+		return Colours.randomARGBColour();
 	}
 	
 	public static BufferedImage scaleImage(BufferedImage img, int w, int h) {

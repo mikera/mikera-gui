@@ -90,6 +90,10 @@ public class Frames {
 		return f;
 	}	
 	
+	public static JFrame display(BufferedImage image, String title) {
+		return displayImage(image,title);
+	}
+	
 	/**
 	 * Display an image in an image viewing frame.
 	 */

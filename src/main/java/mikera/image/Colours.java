@@ -3,6 +3,7 @@ package mikera.image;
 import java.awt.Color;
 
 import mikera.util.Maths;
+import mikera.util.Rand;
 
 /**
  * Class providing static methods for manipulation of colour values
@@ -153,6 +154,7 @@ public class Colours {
 	
 
 	
+	
 	public static int getARGBClamped(int r, int g, int b, int a) {
     	int ri=Maths.bound(r, 0, MAX_BYTE);
     	int gi=Maths.bound(g, 0, MAX_BYTE);
@@ -232,6 +234,13 @@ public class Colours {
 		int b=getBlue(argb);
 		int a=getAlpha(argb);
 		return new Color(r,g,b,a);
+	}
+	
+	/**
+	 * Generates a random ARGB colour as a int
+	 */
+	public static int randomARGBColour() {
+		return 0xFF000000+0x10000*Rand.r(256)+0x100*Rand.r(256)+Rand.r(256);
 	}
 
 	public static Color getColor(int r, int g, int b) {

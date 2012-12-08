@@ -12,6 +12,11 @@ import java.awt.image.BufferedImage;
 import java.text.AttributedCharacterIterator;
 import java.text.AttributedString;
 
+/**
+ * Utility functions for drawing on a Graphics context
+ * 
+ * @author Mike
+ */
 public class Draw {
 
 
