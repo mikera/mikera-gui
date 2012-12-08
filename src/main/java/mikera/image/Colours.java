@@ -154,10 +154,10 @@ public class Colours {
 
 	
 	public static int getARGBClamped(int r, int g, int b, int a) {
-    	int ri=Maths.bound(0, r, MAX_BYTE);
-    	int gi=Maths.bound(0, g, MAX_BYTE);
-    	int bi=Maths.bound(0, b, MAX_BYTE);
-    	int ai=Maths.bound(0, a, MAX_BYTE);
+    	int ri=Maths.bound(r, 0, MAX_BYTE);
+    	int gi=Maths.bound(g, 0, MAX_BYTE);
+    	int bi=Maths.bound(b, 0, MAX_BYTE);
+    	int ai=Maths.bound(a, 0, MAX_BYTE);
 		return getARGBQuick(ri,gi,bi,ai);
 	}
 	
@@ -251,11 +251,11 @@ public class Colours {
 	}
 
 	private static int floatToByte(float f) {
-		return Maths.bound(0, (int)(f*255),255);
+		return Maths.bound((int)(f*255), 0, 255);
 	}
 	
 	private static int doubleToByte(double d) {
-		return Maths.bound(0, (int)(d*255),255);
+		return Maths.bound((int)(d*255), 0, 255);
 	}
 
 
