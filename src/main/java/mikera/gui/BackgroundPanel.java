@@ -33,6 +33,8 @@ public class BackgroundPanel extends JPanel {
 	}
 	
 	public void paintComponent(Graphics g) {
+		if (image==null) return;
+		
 		Rectangle r=g.getClipBounds();
 		int w=image.getWidth();
 		int h=image.getHeight();
