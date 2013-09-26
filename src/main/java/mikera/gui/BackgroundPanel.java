@@ -7,6 +7,11 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
+/**
+ * Simple GUI component - panel with a tiled background
+ * @author Mike
+ *
+ */
 public class BackgroundPanel extends JPanel {
 
 	private BufferedImage image=null;
