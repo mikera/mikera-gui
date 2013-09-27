@@ -40,8 +40,8 @@ public class BackgroundPanel extends JPanel {
 		int w=image.getWidth();
 		int h=image.getHeight();
 		
-		for (int x=r.x/w; x<(r.x+r.width); x+=w) {
-			for (int y=r.y/h; y<(r.y+r.height); y+=h) {
+		for (int x=(r.x/w)*w; x<(r.x+r.width); x+=w) {
+			for (int y=(r.y/h)*h; y<(r.y+r.height); y+=h) {
 				g.drawImage(image, x, y, null);
 			}
 		}
