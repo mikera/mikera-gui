@@ -32,6 +32,7 @@ public class BackgroundPanel extends JPanel {
 		super(layout);
 	}
 	
+	@Override
 	public void paintComponent(Graphics g) {
 		if (image==null) return;
 		
@@ -44,6 +45,5 @@ public class BackgroundPanel extends JPanel {
 				g.drawImage(image, x, y, null);
 			}
 		}
-		
 	}
 }
