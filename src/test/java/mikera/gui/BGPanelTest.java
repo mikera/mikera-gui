@@ -9,6 +9,8 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
+import mikera.gui.interaction.Draggable;
+
 import org.junit.Test;
 
 public class BGPanelTest {
@@ -27,6 +29,7 @@ public class BGPanelTest {
 				g.drawRect(0, 0, getWidth()-1, getHeight()-1);
 			}
 		};
+		Draggable.makeDraggable(tp);
 		tp.setPreferredSize(new Dimension(100,100));
 		bp.add(tp);
 		
