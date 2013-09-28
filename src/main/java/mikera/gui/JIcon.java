@@ -14,9 +14,9 @@ import javax.swing.JComponent;
  */
 public class JIcon extends JComponent {
 	private static final long serialVersionUID = -8838960602578976244L;
-	private Icon icon=null;
-	private double xAlignment = 0.5;
-	private double yAlignment = 0.5;
+	protected Icon icon=null;
+	protected double xAlignment = 0.5;
+	protected double yAlignment = 0.5;
 	
 	public JIcon (BufferedImage b) {
 		this (new BufferedImageIcon(b));
