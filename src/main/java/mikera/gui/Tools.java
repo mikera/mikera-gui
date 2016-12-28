@@ -3,7 +3,6 @@ package mikera.gui;
 import java.awt.Dimension;
 import java.awt.MouseInfo;
 import java.awt.Point;
-import java.awt.PointerInfo;
 import java.awt.Toolkit;
 
 

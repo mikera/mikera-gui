@@ -42,14 +42,17 @@ public final class BufferedImageIcon implements Icon {
 		dh=desth;
 	}
 	
+	@Override
 	public void paintIcon(Component c, Graphics g, int dx, int dy) {
 		g.drawImage(image, dx, dy, dx+dw, dy+dh, x, y, x+w, y+h, null);
 	}
 
+	@Override
 	public int getIconWidth() {
 		return dw;
 	}
 
+	@Override
 	public int getIconHeight() {
 		return dh;
 	}

@@ -1,7 +1,5 @@
 package mikera.gui;
 
-import static org.junit.Assert.*;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -11,8 +9,7 @@ import javax.swing.JFrame;
 
 import mikera.gui.interaction.Draggable;
 
-import org.junit.Test;
-
+@SuppressWarnings("serial")
 public class BGPanelTest {
 	
 	public static void main(String... args) {

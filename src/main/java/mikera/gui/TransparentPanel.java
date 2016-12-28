@@ -1,11 +1,9 @@
 package mikera.gui;
 
-import java.awt.Graphics;
 import java.awt.LayoutManager;
-import java.awt.image.BufferedImage;
-
 import javax.swing.*;
 
+@SuppressWarnings("serial")
 public class TransparentPanel extends JPanel {
 
 	public TransparentPanel() {

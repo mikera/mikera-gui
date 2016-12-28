@@ -12,6 +12,7 @@ import javax.swing.JPanel;
  * @author Mike
  *
  */
+@SuppressWarnings("serial")
 public class BackgroundPanel extends JPanel {
 
 	private BufferedImage image=null;

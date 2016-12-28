@@ -17,10 +17,12 @@ public class Keys extends KeyAdapter {
 		return (b!=null)&&(b.booleanValue());
 	}
 	
+	@Override
 	public void keyPressed(KeyEvent e) {
 		keys.put(e.getKeyCode(), true);
 	}
 	
+	@Override
 	public void keyReleased (KeyEvent e) {
 		keys.put(e.getKeyCode(), false);	
 	}

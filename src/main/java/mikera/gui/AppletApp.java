@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class AppletApp extends JApplet {
 
+	@Override
 	public void init() {
 		// do any applet-specific initialisation here
 		getContentPane().add(new AppPanel());
