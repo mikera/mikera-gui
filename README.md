@@ -1,7 +1,7 @@
 mikera-gui
 ==========
 
-GUI components and utilities for Java.
+Assorted GUI components and utilities for Java.
 
 ## Key components
 
